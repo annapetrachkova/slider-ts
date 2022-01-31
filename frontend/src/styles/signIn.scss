@@ -1,0 +1,131 @@
+@import "common";
+
+.sign-in-main {
+  background: $create-post-background;
+  height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .alert-wrapper {
+    display: none;
+    position: absolute;
+    top: 30px;
+
+    .alert {
+      display: flex;
+      background: $light-gray;
+      color: $warning-color;
+      width: 300px;
+      height: 100px;
+      font-size: 22px;
+      font-weight: 500;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  .sign-in {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .show-password {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 142%;
+        letter-spacing: 0.0168em;
+        color: #333333;
+        margin: 0 auto 45px;
+
+        p {
+          margin-top: 2px;
+        }
+
+        .checkbox {
+          cursor: pointer;
+          width: 16px;
+          height: 16px;
+          border: 1px solid $blue;
+          background: transparent;
+          border-radius: 3px;
+          margin-right: 14px;
+
+          &-arrow {
+            display: none;
+
+            &.checked {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .sign-in-login-button {
+        margin: 0 auto;
+        cursor: pointer;
+
+        .sign-in-login {
+          cursor: pointer;
+          width: 200px;
+          height: 45px;
+          background: #FFFFFF;
+          box-shadow: 0px 6px 8px rgba(234, 237, 242, 0.5);
+          border-radius: 40px;
+          border: none;
+          font-size: 18px;
+          line-height: 142%;
+          letter-spacing: 0.0168em;
+          color: #333333
+        }
+      }
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 120%;
+      letter-spacing: -0.01em;
+      color: #333333;
+      margin-bottom: 50px;
+    }
+
+    &-input {
+      outline: none;
+      border-radius: 40px;
+      width: 500px;
+      height: 40px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.0075em;
+      color: #333333;;
+      border: none;
+      margin-bottom: 15px;
+
+      &.red {
+        border: 1px solid $warning-color;
+      }
+
+      &:hover,
+      &:active {
+        border: none;
+      }
+
+      &::-webkit-input-placeholder {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.0075em;
+        color: $light-gray;
+      }
+    }
+  }
+}
